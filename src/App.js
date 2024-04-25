@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from './logo.png'
 
@@ -50,6 +50,14 @@ const StyledLink = styled(Link)`
   color: black;
 `;
 
+const FooterBar = styled.div`
+  height: 50px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background-color: #999999;
+`;
+
 function App() {
   return (
     <BrowserRouter>
@@ -70,6 +78,13 @@ function App() {
             </ResponsiveNav>
           </NavDisplay>
         </NavBar>
+        <Routes>
+          <Route path="/" ></Route>
+          <Route path="/blanko" ></Route>
+          <Route path="/slido" ></Route>
+          <Route path="/tetro" ></Route>
+        </Routes>
+        <FooterBar></FooterBar>
     </BrowserRouter>
   );
 }
