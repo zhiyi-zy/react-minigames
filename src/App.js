@@ -1,8 +1,10 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from './logo.png'
+import Dashboard from './Dashboard';
+import NavFunction from './NavControl';
+import Blanko from './Blanko';
 
 const NavBar = styled.div`
   width: 100%;
@@ -61,26 +63,10 @@ const FooterBar = styled.div`
 function App() {
   return (
     <BrowserRouter>
-        <NavBar>
-          <NavDisplay>
-            <img src={logo} alt="Logo" style={{ width: 50, height: 50 }} />
-            <PageButtons>
-              <Page><StyledLink to="/">Home</StyledLink></Page>|
-              <Page><StyledLink to="/blanko">Blanko</StyledLink></Page>|
-              <Page><StyledLink to="/slido">Slido</StyledLink></Page>|
-              <Page><StyledLink to="/tetro">Tetro</StyledLink></Page>
-            </PageButtons>
-            <ResponsiveNav>
-              <Page><StyledLink to="/">H</StyledLink></Page>|
-              <Page><StyledLink to="/blanko">B</StyledLink></Page>|
-              <Page><StyledLink to="/slido">S</StyledLink></Page>|
-              <Page><StyledLink to="/tetro">T</StyledLink></Page>
-            </ResponsiveNav>
-          </NavDisplay>
-        </NavBar>
+        <NavFunction></NavFunction>
         <Routes>
-          <Route path="/" ></Route>
-          <Route path="/blanko" ></Route>
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/blanko" element={<Blanko />}></Route>
           <Route path="/slido" ></Route>
           <Route path="/tetro" ></Route>
         </Routes>
