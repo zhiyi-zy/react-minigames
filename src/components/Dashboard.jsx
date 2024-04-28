@@ -2,6 +2,12 @@ import React from 'react'
 import HeaderBar from './HeaderBar'
 import FootBar from './FootBar'
 import { PageContainer, Container } from '../Style'
+import styled from 'styled-components';
+
+const MainTitle = styled.div`
+    color: red;
+    font-size: 2em;
+`
 
 export default function Dashboard () {
     const [nGames, setNGames] = React.useState(0)
@@ -37,11 +43,11 @@ export default function Dashboard () {
         <PageContainer>
             <HeaderBar />
             <Container>
-                <div id="infos">
-                    <div id="main-title">
+                <div >
+                    <MainTitle>
                         Please choose an option from the navbar.
-                    </div>
-                    <div id="sub-title">
+                    </MainTitle>
+                    <div >
                         Games won: {nGames} <button onClick={resetValue}>(reset)</button>
                     </div>
                 </div>
