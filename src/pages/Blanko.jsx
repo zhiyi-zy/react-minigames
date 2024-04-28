@@ -3,6 +3,7 @@ import HeaderBar from '../components/HeaderBar'
 import FootBar from '../components/FootBar'
 import { strs } from '../data/blanko.js'
 import '../styles/Blanko.css'
+import { PageContainer, Container } from '../Style'
 
 export default function Blanko () {
     const [currStr, setCurrStr] = React.useState('')
@@ -99,15 +100,15 @@ export default function Blanko () {
     
 
     return (
-        <div className="page-container">
+        <PageContainer>
             <HeaderBar />
-            <div className="container">
+            <Container>
                 <div id="block-container">
                     {blocks}
                 </div>
                 <button id="blanko-reset-btn" onClick={initGame}>RESET</button>
-            </div>
+            </Container>
             <FootBar />
-        </div>
+        </PageContainer>
     )
 }

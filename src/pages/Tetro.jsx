@@ -2,6 +2,7 @@ import React from 'react'
 import HeaderBar from '../components/HeaderBar'
 import FootBar from '../components/FootBar'
 import '../styles/Tetro.css'
+import { PageContainer, Container } from '../Style'
 
 export default function Tetro () {
     const [ board, setBoard ] = React.useState([])
@@ -207,17 +208,17 @@ export default function Tetro () {
     }
 
     return (
-        <div className="page-container">
+        <PageContainer>
             <HeaderBar />
-            <div className="container">
+            <Container>
                 <div id="board-container" onClick={handleClick}>
                     {blocks}
                 </div>
                 <button id="tetro-reset-btn" onClick={handleReset}>
                     RESET
                 </button>
-            </div>
+            </Container>
             <FootBar />
-        </div>
+        </PageContainer>
     )
 }

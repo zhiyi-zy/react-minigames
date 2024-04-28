@@ -8,7 +8,6 @@ import Tetro from './pages/Tetro'
 function App() {
   return (
     <div id="app">
-      {/* <HeaderBar /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -17,7 +16,6 @@ function App() {
           <Route path="/tetro" element={<Tetro />} />
         </Routes>
       </BrowserRouter>
-      {/* <FootBar /> */}
     </div>
   );
 }

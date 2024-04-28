@@ -10,6 +10,7 @@ import e from '../data/shrek/5.png'
 import f from '../data/shrek/6.png'
 import g from '../data/shrek/7.png'
 import h from '../data/shrek/8.png'
+import { PageContainer, Container } from '../Style'
 
 export default function Slido () {
     const results = [a, b, c, d, e, f, g, h, '']
@@ -110,9 +111,9 @@ export default function Slido () {
     }
 
     return (
-        <div className="page-container">
+        <PageContainer>
             <HeaderBar />
-            <div className="container">
+            <Container>
                 <div id="slido-container">
                     <div className="slido-block-rows">
                         {blocks[0]}
@@ -134,8 +135,8 @@ export default function Slido () {
                     <button id="slido-solve-btn" disabled={disable} onClick={handleSolve}>Solve</button>
                     <button id="slido-reset-btn" disabled={!disable} onClick={handleReset}>Reset</button>
                 </div>
-            </div>
+            </Container>
             <FootBar />
-        </div>
+        </PageContainer>
     )
 }
