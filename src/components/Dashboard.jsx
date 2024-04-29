@@ -34,7 +34,6 @@ export default function Dashboard () {
     }, [])
 
     async function resetValue () {
-        const initScore = await getScore()
         localStorage.setItem('score', JSON.stringify(0))
         setNGames(0);
     }
