@@ -38,7 +38,7 @@ const HeaderItems = styled.div`
 
 const LongHeader = styled.span`
     display: block;
-
+    
     @media (max-width: 800px) {
         display: none;
     }
